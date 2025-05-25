@@ -4,18 +4,24 @@ The hangman game is a multiplayer game. In this game, one player selects a word.
 
 ## How to Create Hangman Game in Python?
 
-To create a hangman game in Python, we will use the following steps
+Here are the steps to create a Hangman game in Python:
 
-- First, we will ask for the name of the user. We will take the user input using the input () method. After execution, the input() method takes the input from the user and returns a string
+1] Choose a word list: Create a list of words that the computer can randomly select from.
 
-- Next, we will select a word and ask the user to start guessing the characters in the word
+2] Select a random word: Use the random module to choose a word from the list.
 
-- We will also define the maximum number of attempts the user can take
+3] Create the game board: Display the word as a series of underscores, one for each letter.
 
-- Now, we will use a while loop to repeatedly ask the user to guess the character until the attempts are exhausted
+4] Get player input: Ask the player to guess a letter.
 
-- Inside the while loop, if the user guesses the correct character. We will include it in the response. Otherwise, we will notify the user that they made a mistake
+5] Check the guess:
+If the letter is in the word, reveal its position(s) on the game board.
+If the letter is not in the word, increment the number of incorrect guesses.
 
-- If the user is able to guess all the characters of the word within the maximum number of attempts, they win the game
+6] Update the game state:
+If the player has guessed all the letters, they win.
+If the player has made too many incorrect guesses (e.g., 6 for head, body, 2 arms, 2 legs), they lose.
 
-- If the user exhausts all their attempts before guessing the entire word, they lose
+7] Display the result: Show the player whether they won or lost, and reveal the correct word if they lost.
+
+8] Ask to play again: Allow the player to start a new game if they wish.
